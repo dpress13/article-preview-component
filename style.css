@@ -91,6 +91,17 @@ ul {
   max-width: 2.5rem;
 }
 
+.img-container {
+  overflow: hidden;
+  padding: 0;
+}
+
+.img-main {
+  border-radius: 25px 0 0 25px;
+  max-width: 150%;
+}
+
+/* Share Icon */
 .share-icon {
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
@@ -103,21 +114,17 @@ ul {
   float: right;
 }
 
+.share-icon-active {
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(210, 46%, 95%);
+}
+
 .share-icon:hover {
   background-color: hsl(214, 17%, 51%);
   color: hsl(210, 46%, 95%);
 }
 
 
-.img-container {
-  overflow: hidden;
-  padding: 0;
-}
-
-.img-main {
-  border-radius: 25px 0 0 25px;
-  max-width: 150%;
-}
 
 /* Share Tooltip */
 .share-tooltip {
@@ -125,7 +132,8 @@ ul {
   position: relative;
 }
 
-.active {
+
+.share-tooltip-active {
   display: flex;
   background-color: hsl(217, 19%, 35%);
   color: hsl(210, 46%, 95%);
@@ -138,7 +146,7 @@ ul {
 
 }
 
-.share-text {
+.share-tooltip-text {
   background-color: transparent;
   color: hsl(214, 17%, 51%);
   font-family: 'Manrope', sans-serif;
@@ -147,14 +155,14 @@ ul {
   letter-spacing: .2rem;
 }
 
-.social-icons {
+.share-tooltip-social-icons {
   align-items: center;
   background-color: transparent;
   color: hsl(210, 46%, 95%);
   display: flex;
 }
 
-.social-icon {
+.share-tooltip-social-icon {
   /* position: relative; */
   margin: 0 0.5rem;
 }

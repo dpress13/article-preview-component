@@ -1,3 +1,4 @@
 $(".share-icon").click(function() {
-  $(".share-tooltip").toggleClass("active");
+  $(".share-icon").toggleClass("share-icon-active");
+  $(".share-tooltip").toggleClass("share-tooltip-active");
 })
