@@ -124,14 +124,11 @@ ul {
   color: hsl(210, 46%, 95%);
 }
 
-
-
-/* Share Tooltip */
+/* Share Tooltip - Original */
 .share-tooltip {
   display: none;
   position: relative;
 }
-
 
 .share-tooltip-active {
   display: flex;
@@ -165,4 +162,48 @@ ul {
 .share-tooltip-social-icon {
   /* position: relative; */
   margin: 0 0.5rem;
+}
+
+/* Share Tooltip - New */
+.share-tooltip {
+  position: relative;
+}
+
+.share-tooltip .share-tooltip-content {
+  visibility: hidden;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  bottom: 125%
+  color: hsl(210, 46%, 95%);
+  height: 45px;
+  left: 50%;
+  margin-left: 112.5px;
+  opacity: 0;
+  padding: 5px 0;
+  position: absolute;
+  transition: opacity 0.3s;
+  width: 225px;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Share Tooltip Arrow */
+.share-tooltip .share-tooltip-content:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent hsl(217, 19%, 35%) transparent transparent;
+}
+
+.share-tooltip input {
+  display: none;
+}
+
+.share-tooltip input:checked+share-tooltip-content {
+  visibility: visible;
+  opacity: 1;
 }
