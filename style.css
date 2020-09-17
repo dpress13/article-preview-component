@@ -1,6 +1,5 @@
 body {
   background-color: hsl(210, 46%, 95%);
-  color: transparent;
 }
 
 h1 {
@@ -66,20 +65,20 @@ ul {
 }
 
 .card {
+  border: 0;
   display: flex;
   align-items: flex-start;
 }
 
-.card-content {
+.card-content-container {
   flex: 1;
   margin: 2rem 3rem 1rem;
 }
 
 .container {
   background-color: #fff;
-  color: transparent;
   border-radius: 25px;
-  max-width: 56%;
+  max-width: 52%;
   margin-top: 14rem;
   padding: 0;
 }
@@ -91,18 +90,26 @@ ul {
   max-width: 2.5rem;
 }
 
-.img-container {
-  left: 15px;
+.card-main-img-container {
   overflow: hidden;
   padding: 0;
 }
 
 .img-main {
   border-radius: 25px 0 0 25px;
-  max-width: 150%;
+  max-width: 147%;
+}
+
+.row {
+  margin: 0;
 }
 
 /* Share Icon */
+
+i.fas {
+  line-height: 2;
+}
+
 .share-icon {
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
@@ -115,15 +122,21 @@ ul {
   float: right;
 }
 
+.share-icon:hover {
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(210, 46%, 95%);
+}
+
 .share-icon-active {
   background-color: hsl(214, 17%, 51%);
   color: hsl(210, 46%, 95%);
 }
 
-.share-icon:hover {
-  background-color: hsl(214, 17%, 51%);
-  color: hsl(210, 46%, 95%);
+.share-icon-active:hover {
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(214, 17%, 51%);
 }
+
 
 /* Share Tooltip - Original */
 .share-tooltip {
@@ -178,6 +191,15 @@ ul {
   /* position: relative; */
   margin: 0 0.5rem;
 }
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 375px,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
 
 /* Share Tooltip - New */
 /* .share-tooltip {
