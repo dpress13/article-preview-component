@@ -58,6 +58,7 @@ ul {
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: none;
 }
 
 .avatar-share {
@@ -78,7 +79,7 @@ ul {
 .container {
   background-color: #fff;
   border-radius: 25px;
-  max-width: 52%;
+  max-width: 700px;
   margin-top: 14rem;
   padding: 0;
 }
@@ -110,6 +111,18 @@ i.fas {
   line-height: 2;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+}
+.share-wrapper {
+    position: relative;
+    float: right;
+}
+.byline {
+  flex: 1;
+}
 .share-icon {
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
@@ -118,8 +131,6 @@ i.fas {
   line-height: 2;
   text-align: center;
   width: 2rem;
-  position: relative;
-  float: right;
 }
 
 .share-icon:hover {
@@ -164,11 +175,14 @@ i.fas {
   background-color: hsl(217, 19%, 35%);
   color: hsl(210, 46%, 95%);
   border-radius: 10px;
-  height: 45px;
   position: absolute;
-  width: 225px;
   justify-content: center;
   z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -70px;
+  padding: 10px 25px;
+
 }
 
 .share-tooltip-text {
@@ -232,3 +246,7 @@ $grid-breakpoints: (
   visibility: visible;
   opacity: 1;
 } */
+
+@media (max-width: 520px) {
+
+}
